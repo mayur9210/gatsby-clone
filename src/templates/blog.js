@@ -1,30 +1,24 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- */
-
-import PropTypes from 'prop-types';
-import React from 'react';
-import MarkdownPost from 'components/MarkdownPost';
-import {createLinkBlog} from 'utils/createLink';
+import PropTypes from "prop-types";
+import React from "react";
+import MarkdownPost from "components/MarkdownPost";
+import { createLinkBlog } from "utils/createLink";
 
 const toSectionList = allMarkdownRemark => [
   {
-    title: 'Recent Posts',
+    title: "Recent Posts",
     items: allMarkdownRemark.edges
-      .map(({node}) => ({
+      .map(({ node }) => ({
         id: node.fields.slug,
-        title: node.frontmatter.title,
+        title: node.frontmatter.title
       }))
       .concat({
-        id: '/blog',
-        title: 'All posts ...',
-      }),
-  },
+        id: "/blog",
+        title: "All posts ..."
+      })
+  }
 ];
 
-const Blog = ({data, location}) => (
+const Blog = ({ data, location }) => (
   <MarkdownPost
     authors={data.markdownRemark.frontmatter.author}
     createLink={createLinkBlog}
@@ -38,13 +32,13 @@ const Blog = ({data, location}) => (
 );
 
 Blog.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query TemplateBlogMarkdown($slug: String!) {
-    markdownRemark(fields: {slug: {eq: $slug}}) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       excerpt(pruneLength: 500)
       frontmatter {
@@ -66,8 +60,8 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       limit: 10
-      filter: {id: {regex: "/blog/"}}
-      sort: {fields: [fields___date], order: DESC}
+      filter: { id: { regex: "/blog/" } }
+      sort: { fields: [fields___date], order: DESC }
     ) {
       edges {
         node {

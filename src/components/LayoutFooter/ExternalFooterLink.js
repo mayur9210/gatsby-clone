@@ -1,41 +1,35 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- * @flow
- */
+import React from "react";
+import { colors } from "theme";
+import ExternalLinkSvg from "templates/components/ExternalLinkSvg";
 
-import React from 'react';
-import {colors} from 'theme';
-import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
-
-import type {Node} from 'react';
+import type { Node } from "react";
 
 type Props = {
   children: Node,
   href: string,
   target?: string,
-  rel?: string,
+  rel?: string
 };
 
-const ExternalFooterLink = ({children, href, target, rel}: Props) => (
+const ExternalFooterLink = ({ children, href, target, rel }: Props) => (
   <a
     css={{
       lineHeight: 2,
-      ':hover': {
-        color: colors.brand,
-      },
+      ":hover": {
+        color: colors.brand
+      }
     }}
     href={href}
     target={target}
-    rel={rel}>
+    rel={rel}
+  >
     {children}
     <ExternalLinkSvg
       cssProps={{
         verticalAlign: -2,
-        display: 'inline-block',
+        display: "inline-block",
         marginLeft: 5,
-        color: colors.subtle,
+        color: colors.subtle
       }}
     />
   </a>

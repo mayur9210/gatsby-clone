@@ -1,22 +1,19 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- * @flow
- */
+import Container from "components/Container";
+import ExternalFooterLink from "./ExternalFooterLink";
+import FooterLink from "./FooterLink";
+import FooterNav from "./FooterNav";
+import MetaTitle from "templates/components/MetaTitle";
+import React from "react";
+import { colors, media } from "theme";
+import { sectionListCommunity } from "utils/sectionList";
 
-import Container from 'components/Container';
-import ExternalFooterLink from './ExternalFooterLink';
-import FooterLink from './FooterLink';
-import FooterNav from './FooterNav';
-import MetaTitle from 'templates/components/MetaTitle';
-import React from 'react';
-import {colors, media} from 'theme';
-import {sectionListCommunity} from 'utils/sectionList';
+import ossLogoPng from "images/oss_logo.png";
 
-import ossLogoPng from 'images/oss_logo.png';
-
-const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
+const Footer = ({
+  layoutHasSidebar = false
+}: {
+  layoutHasSidebar: boolean
+}) => (
   <footer
     css={{
       backgroundColor: colors.darker,
@@ -24,77 +21,86 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
       paddingTop: 10,
       paddingBottom: 50,
 
-      [media.size('sidebarFixed')]: {
-        paddingTop: 40,
-      },
-    }}>
+      [media.size("sidebarFixed")]: {
+        paddingTop: 40
+      }
+    }}
+  >
     <Container>
       <div
         css={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
 
-          [media.between('small', 'medium')]: {
-            paddingRight: layoutHasSidebar ? 240 : null,
+          [media.between("small", "medium")]: {
+            paddingRight: layoutHasSidebar ? 240 : null
           },
 
-          [media.between('large', 'largerSidebar')]: {
-            paddingRight: layoutHasSidebar ? 280 : null,
+          [media.between("large", "largerSidebar")]: {
+            paddingRight: layoutHasSidebar ? 280 : null
           },
-          [media.between('largerSidebar', 'sidebarFixed', true)]: {
-            paddingRight: layoutHasSidebar ? 380 : null,
-          },
-        }}>
+          [media.between("largerSidebar", "sidebarFixed", true)]: {
+            paddingRight: layoutHasSidebar ? 380 : null
+          }
+        }}
+      >
         <div
           css={{
-            flexWrap: 'wrap',
-            display: 'flex',
+            flexWrap: "wrap",
+            display: "flex",
 
-            [media.lessThan('large')]: {
-              width: '100%',
+            [media.lessThan("large")]: {
+              width: "100%"
             },
-            [media.greaterThan('xlarge')]: {
-              width: 'calc(100% / 3 * 2)',
-              paddingLeft: 40,
-            },
-          }}>
+            [media.greaterThan("xlarge")]: {
+              width: "calc(100% / 3 * 2)",
+              paddingLeft: 40
+            }
+          }}
+        >
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Channels</MetaTitle>
             <ExternalFooterLink
               href="https://github.com/facebook/react"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+            >
               GitHub
             </ExternalFooterLink>
             <ExternalFooterLink
               href="http://stackoverflow.com/questions/tagged/reactjs"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+            >
               Stack Overflow
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://discuss.reactjs.org"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+            >
               Discussion Forum
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://discord.gg/0ZcbPKXt5bZjGY5n"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+            >
               Reactiflux Chat
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://www.facebook.com/react"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+            >
               Facebook
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://twitter.com/reactjs"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+            >
               Twitter
             </ExternalFooterLink>
           </FooterNav>
@@ -116,7 +122,8 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
             <ExternalFooterLink
               href="http://facebook.github.io/react-native/"
               target="_blank"
-              rel="noopener">
+              rel="noopener"
+            >
               React Native
             </ExternalFooterLink>
           </FooterNav>
@@ -124,31 +131,33 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
         <section
           css={{
             paddingTop: 40,
-            display: 'block !important', // Override 'Installation' <style> specifics
+            display: "block !important", // Override 'Installation' <style> specifics
 
-            [media.greaterThan('xlarge')]: {
-              width: 'calc(100% / 3)',
+            [media.greaterThan("xlarge")]: {
+              width: "calc(100% / 3)",
+              order: -1
+            },
+            [media.greaterThan("large")]: {
               order: -1,
+              width: layoutHasSidebar ? null : "calc(100% / 3)"
             },
-            [media.greaterThan('large')]: {
-              order: -1,
-              width: layoutHasSidebar ? null : 'calc(100% / 3)',
-            },
-            [media.lessThan('large')]: {
-              textAlign: 'center',
-              width: '100%',
-              paddingTop: 40,
-            },
-          }}>
+            [media.lessThan("large")]: {
+              textAlign: "center",
+              width: "100%",
+              paddingTop: 40
+            }
+          }}
+        >
           <a
             href="https://code.facebook.com/projects/"
             target="_blank"
-            rel="noopener">
+            rel="noopener"
+          >
             <img
               alt="Facebook Open Source"
               css={{
                 maxWidth: 160,
-                height: 'auto',
+                height: "auto"
               }}
               src={ossLogoPng}
             />
@@ -156,8 +165,9 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
           <p
             css={{
               color: colors.subtleOnDark,
-              paddingTop: 15,
-            }}>
+              paddingTop: 15
+            }}
+          >
             Copyright © 2018 Facebook Inc.
           </p>
         </section>

@@ -1,14 +1,8 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- */
-
-import React from 'react';
-import {colors, media} from 'theme';
-import isItemActive from 'utils/isItemActive';
-import MetaTitle from '../MetaTitle';
-import ChevronSvg from '../ChevronSvg';
+import React from "react";
+import { colors, media } from "theme";
+import isItemActive from "utils/isItemActive";
+import MetaTitle from "../MetaTitle";
+import ChevronSvg from "../ChevronSvg";
 
 const Section = ({
   activeItemId,
@@ -18,37 +12,39 @@ const Section = ({
   location,
   onLinkClick,
   onSectionTitleClick,
-  section,
+  section
 }) => (
   <div>
     <button
       css={{
-        cursor: 'pointer',
-        backgroundColor: 'transparent',
+        cursor: "pointer",
+        backgroundColor: "transparent",
         border: 0,
-        marginTop: 10,
+        marginTop: 10
       }}
-      onClick={onSectionTitleClick}>
+      onClick={onSectionTitleClick}
+    >
       <MetaTitle
         cssProps={{
-          [media.greaterThan('small')]: {
+          [media.greaterThan("small")]: {
             color: isActive ? colors.text : colors.subtle,
 
-            ':hover': {
-              color: colors.text,
-            },
-          },
-        }}>
+            ":hover": {
+              color: colors.text
+            }
+          }
+        }}
+      >
         {section.title}
         <ChevronSvg
           cssProps={{
             marginLeft: 7,
-            transform: isActive ? 'rotateX(180deg)' : 'rotateX(0deg)',
-            transition: 'transform 0.2s ease',
+            transform: isActive ? "rotateX(180deg)" : "rotateX(0deg)",
+            transition: "transform 0.2s ease",
 
-            [media.lessThan('small')]: {
-              display: 'none',
-            },
+            [media.lessThan("small")]: {
+              display: "none"
+            }
           }}
         />
       </MetaTitle>
@@ -57,16 +53,18 @@ const Section = ({
       css={{
         marginBottom: 10,
 
-        [media.greaterThan('small')]: {
-          display: isActive ? 'block' : 'none',
-        },
-      }}>
+        [media.greaterThan("small")]: {
+          display: isActive ? "block" : "none"
+        }
+      }}
+    >
       {section.items.map(item => (
         <li
           key={item.id}
           css={{
-            marginTop: 5,
-          }}>
+            marginTop: 5
+          }}
+        >
           {createLink({
             isActive: isScrollSync
               ? activeItemId === item.id
@@ -74,11 +72,11 @@ const Section = ({
             item,
             location,
             onLinkClick,
-            section,
+            section
           })}
 
           {item.subitems && (
-            <ul css={{marginLeft: 20}}>
+            <ul css={{ marginLeft: 20 }}>
               {item.subitems.map(subitem => (
                 <li key={subitem.id}>
                   {createLink({
@@ -88,7 +86,7 @@ const Section = ({
                     item: subitem,
                     location,
                     onLinkClick,
-                    section,
+                    section
                   })}
                 </li>
               ))}

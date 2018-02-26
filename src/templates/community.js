@@ -1,16 +1,10 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- */
+import MarkdownPage from "components/MarkdownPage";
+import PropTypes from "prop-types";
+import React from "react";
+import { createLinkCommunity } from "utils/createLink";
+import { sectionListCommunity } from "utils/sectionList";
 
-import MarkdownPage from 'components/MarkdownPage';
-import PropTypes from 'prop-types';
-import React from 'react';
-import {createLinkCommunity} from 'utils/createLink';
-import {sectionListCommunity} from 'utils/sectionList';
-
-const Community = ({data, location}) => (
+const Community = ({ data, location }) => (
   <MarkdownPage
     createLink={createLinkCommunity}
     location={location}
@@ -21,13 +15,13 @@ const Community = ({data, location}) => (
 );
 
 Community.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
   query TemplateCommunityMarkdown($slug: String!) {
-    markdownRemark(fields: {slug: {eq: $slug}}) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title

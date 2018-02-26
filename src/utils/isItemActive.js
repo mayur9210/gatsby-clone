@@ -1,15 +1,8 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- * @flow
- */
+import slugify from "utils/slugify";
 
-import slugify from 'utils/slugify';
-
-const toAnchor = (href: string = ''): string => {
-  const index = href.indexOf('#');
-  return index >= 0 ? href.substr(index) : '';
+const toAnchor = (href: string = ""): string => {
+  const index = href.indexOf("#");
+  return index >= 0 ? href.substr(index) : "";
 };
 
 // TODO Account for redirect_from URLs somehow; they currently won't match.
@@ -17,7 +10,7 @@ const toAnchor = (href: string = ''): string => {
 
 type Item = {
   id: string,
-  href: string,
+  href: string
 };
 
 const isItemActive = (location: Location, item: Item): boolean => {
@@ -25,10 +18,10 @@ const isItemActive = (location: Location, item: Item): boolean => {
     if (item.href) {
       return location.hash === toAnchor(item.href);
     }
-  } else if (item.id.includes('html')) {
+  } else if (item.id.includes("html")) {
     return location.pathname.includes(item.id);
   }
-  const slugId = location.pathname.split('/').slice(-1)[0];
+  const slugId = location.pathname.split("/").slice(-1)[0];
   return slugId === slugify(item.id);
 };
 

@@ -1,19 +1,12 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- * @flow
- */
+import React from "react";
 
-import React from 'react';
-
-import type {Node} from 'react';
+import type { Node } from "react";
 
 function replaceArgs(msg: string, argList: Array<string>): string {
   let argIdx = 0;
   return msg.replace(/%s/g, function() {
     const arg = argList[argIdx++];
-    return arg === undefined ? '[missing argument]' : arg;
+    return arg === undefined ? "[missing argument]" : arg;
   });
 }
 
@@ -39,30 +32,30 @@ function urlify(str: string): Node {
 // `?invariant=123&args[]=foo&args[]=bar`
 // or `// ?invariant=123&args[0]=foo&args[1]=bar`
 function parseQueryString(
-  search: string,
-): ?{|code: string, args: Array<string>|} {
+  search: string
+): ?{| code: string, args: Array<string> |} {
   const rawQueryString = search.substring(1);
   if (!rawQueryString) {
     return null;
   }
 
-  let code = '';
+  let code = "";
   let args = [];
 
-  const queries = rawQueryString.split('&');
+  const queries = rawQueryString.split("&");
   for (let i = 0; i < queries.length; i++) {
     const query = decodeURIComponent(queries[i]);
-    if (query.indexOf('invariant=') === 0) {
+    if (query.indexOf("invariant=") === 0) {
       code = query.slice(10);
-    } else if (query.indexOf('args[') === 0) {
-      args.push(query.slice(query.indexOf(']=') + 2));
+    } else if (query.indexOf("args[") === 0) {
+      args.push(query.slice(query.indexOf("]=") + 2));
     }
   }
 
-  return {args, code};
+  return { args, code };
 }
 
-function ErrorResult(props: {|code: ?string, msg: string|}) {
+function ErrorResult(props: {| code: ?string, msg: string |}) {
   const code = props.code;
   const errorMsg = props.msg;
 
@@ -89,10 +82,10 @@ function ErrorResult(props: {|code: ?string, msg: string|}) {
 
 function ErrorDecoder(props: {|
   errorCodesString: string,
-  location: {search: string},
+  location: { search: string }
 |}) {
   let code = null;
-  let msg = '';
+  let msg = "";
 
   const errorCodes = JSON.parse(props.errorCodesString);
   const parseResult = parseQueryString(props.location.search);

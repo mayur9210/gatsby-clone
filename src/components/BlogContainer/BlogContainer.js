@@ -8,7 +8,7 @@ import type { Node } from "react";
  * This component wraps page content sections (eg header, footer, main).
  * It provides consistent margin and max width behavior.
  */
-const Container = ({ children }: { children: Node }) => (
+const BlogContainer = ({ children }: { children: Node }) => (
   <div
     css={{
       paddingLeft: 20,
@@ -21,7 +21,7 @@ const Container = ({ children }: { children: Node }) => (
       },
 
       [media.size("xxlarge")]: {
-        maxWidth: 1260
+        maxWidth: 880
       }
     }}
   >
@@ -29,4 +29,4 @@ const Container = ({ children }: { children: Node }) => (
   </div>
 );
 
-export default Container;
+export default BlogContainer;

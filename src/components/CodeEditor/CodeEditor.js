@@ -1,22 +1,16 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- */
-
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import Remarkable from 'remarkable';
-import {LiveEditor, LiveProvider} from 'react-live';
-import {colors, media} from 'theme';
-import MetaTitle from 'templates/components/MetaTitle';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import Remarkable from "remarkable";
+import { LiveEditor, LiveProvider } from "react-live";
+import { colors, media } from "theme";
+import MetaTitle from "templates/components/MetaTitle";
 
 const compileES5 = (
-  code, // eslint-disable-next-line no-undef
-) => Babel.transform(code, {presets: ['es2015', 'react']}).code;
+  code // eslint-disable-next-line no-undef
+) => Babel.transform(code, { presets: ["es2015", "react"] }).code;
 
 // eslint-disable-next-line no-undef
-const compileES6 = code => Babel.transform(code, {presets: ['react']}).code;
+const compileES6 = code => Babel.transform(code, { presets: ["react"] }).code;
 
 class CodeEditor extends Component {
   constructor(props, context) {
@@ -39,13 +33,13 @@ class CodeEditor extends Component {
   }
 
   render() {
-    const {children} = this.props;
+    const { children } = this.props;
     const {
       compiledES6,
       code,
       error,
       showBabelErrorMessage,
-      showJSX,
+      showJSX
     } = this.state;
 
     let errorMessage;
@@ -68,154 +62,165 @@ class CodeEditor extends Component {
       <LiveProvider code={showJSX ? code : compiledES6} mountStylesheet={false}>
         <div
           css={{
-            [media.greaterThan('xlarge')]: {
-              display: 'flex',
-              flexDirection: 'row',
+            [media.greaterThan("xlarge")]: {
+              display: "flex",
+              flexDirection: "row"
             },
 
-            [media.lessThan('large')]: {
-              display: 'block',
-            },
-          }}>
+            [media.lessThan("large")]: {
+              display: "block"
+            }
+          }}
+        >
           {children && (
             <div
               css={{
-                flex: '0 0 33%',
+                flex: "0 0 33%",
 
-                [media.lessThan('xlarge')]: {
-                  marginBottom: 20,
+                [media.lessThan("xlarge")]: {
+                  marginBottom: 20
                 },
 
-                '& h3': {
+                "& h3": {
                   color: colors.dark,
-                  maxWidth: '11em',
-                  paddingTop: 0,
+                  maxWidth: "11em",
+                  paddingTop: 0
                 },
 
-                '& p': {
+                "& p": {
                   marginTop: 15,
                   marginRight: 40,
                   lineHeight: 1.7,
 
-                  [media.greaterThan('xlarge')]: {
-                    marginTop: 25,
-                  },
-                },
-              }}>
+                  [media.greaterThan("xlarge")]: {
+                    marginTop: 25
+                  }
+                }
+              }}
+            >
               {children}
             </div>
           )}
 
           <div
             css={{
-              [media.greaterThan('medium')]: {
-                flex: '0 0 67%',
-                display: 'flex',
-                alignItems: 'stretch',
-                flexDirection: 'row',
+              [media.greaterThan("medium")]: {
+                flex: "0 0 67%",
+                display: "flex",
+                alignItems: "stretch",
+                flexDirection: "row"
               },
 
-              [media.lessThan('small')]: {
-                display: 'block',
-              },
-            }}>
+              [media.lessThan("small")]: {
+                display: "block"
+              }
+            }}
+          >
             <div
               css={{
-                flex: '0 0 70%',
-                overflow: 'hidden',
-                borderRadius: '10px 0 0 10px',
+                flex: "0 0 70%",
+                overflow: "hidden",
+                borderRadius: "10px 0 0 10px",
 
-                [media.lessThan('medium')]: {
-                  borderRadius: '10px 10px 0 0',
-                },
-              }}>
+                [media.lessThan("medium")]: {
+                  borderRadius: "10px 10px 0 0"
+                }
+              }}
+            >
               <div
                 css={{
-                  padding: '0px 10px',
+                  padding: "0px 10px",
                   background: colors.darker,
-                  color: colors.white,
-                }}>
+                  color: colors.white
+                }}
+              >
                 <MetaTitle onDark={true}>
                   Live JSX Editor
                   <label
                     css={{
                       fontSize: 14,
-                      float: 'right',
-                      cursor: 'pointer',
-                    }}>
+                      float: "right",
+                      cursor: "pointer"
+                    }}
+                  >
                     <input
                       checked={this.state.showJSX}
                       onChange={event =>
-                        this.setState({showJSX: event.target.checked})
+                        this.setState({ showJSX: event.target.checked })
                       }
                       type="checkbox"
-                    />{' '}
+                    />{" "}
                     JSX?
                   </label>
                 </MetaTitle>
               </div>
               <div
                 css={{
-                  height: '100%',
-                  width: '100%',
-                  borderRadius: '0',
-                  maxHeight: '340px !important',
-                  marginTop: '0 !important',
-                  marginLeft: '0 !important',
-                  paddingLeft: '0 !important',
-                  marginRight: '0 !important',
-                  paddingRight: '0 !important',
-                  marginBottom: '0 !important',
-                  paddingBottom: '20px !important',
-                  [media.lessThan('medium')]: {
-                    marginBottom: '0 !important',
+                  height: "100%",
+                  width: "100%",
+                  borderRadius: "0",
+                  maxHeight: "340px !important",
+                  marginTop: "0 !important",
+                  marginLeft: "0 !important",
+                  paddingLeft: "0 !important",
+                  marginRight: "0 !important",
+                  paddingRight: "0 !important",
+                  marginBottom: "0 !important",
+                  paddingBottom: "20px !important",
+                  [media.lessThan("medium")]: {
+                    marginBottom: "0 !important"
                   },
 
-                  '& pre.prism-code[contenteditable]': {
+                  "& pre.prism-code[contenteditable]": {
                     outline: 0,
-                    overflow: 'auto',
-                    marginRight: '0 !important',
-                    marginBottom: '0 !important',
-                  },
+                    overflow: "auto",
+                    marginRight: "0 !important",
+                    marginBottom: "0 !important"
+                  }
                 }}
-                className="gatsby-highlight">
+                className="gatsby-highlight"
+              >
                 <LiveEditor onChange={this._onChange} />
               </div>
             </div>
             {error && (
               <div
                 css={{
-                  flex: '0 0 30%',
-                  overflow: 'hidden',
+                  flex: "0 0 30%",
+                  overflow: "hidden",
                   border: `1px solid ${colors.error}`,
-                  borderRadius: '0 10px 10px 0',
+                  borderRadius: "0 10px 10px 0",
                   fontSize: 12,
                   lineHeight: 1.5,
 
-                  [media.lessThan('medium')]: {
-                    borderRadius: '0 0 10px 10px',
-                  },
-                }}>
+                  [media.lessThan("medium")]: {
+                    borderRadius: "0 0 10px 10px"
+                  }
+                }}
+              >
                 <div
                   css={{
-                    padding: '0px 10px',
+                    padding: "0px 10px",
                     background: colors.error,
-                    color: colors.white,
-                  }}>
+                    color: colors.white
+                  }}
+                >
                   <MetaTitle
                     cssProps={{
-                      color: colors.white,
-                    }}>
+                      color: colors.white
+                    }}
+                  >
                     Error
                   </MetaTitle>
                 </div>
                 <pre
                   css={{
-                    whiteSpace: 'pre-wrap',
-                    wordBreak: 'break-word',
+                    whiteSpace: "pre-wrap",
+                    wordBreak: "break-word",
                     color: colors.error,
-                    padding: 10,
-                  }}>
+                    padding: 10
+                  }}
+                >
                   {errorMessage}
                 </pre>
               </div>
@@ -223,46 +228,48 @@ class CodeEditor extends Component {
             {!error && (
               <div
                 css={{
-                  flex: '0 0 30%',
-                  overflow: 'hidden',
+                  flex: "0 0 30%",
+                  overflow: "hidden",
                   border: `1px solid ${colors.divider}`,
-                  borderRadius: '0 10px 10px 0',
+                  borderRadius: "0 10px 10px 0",
 
-                  [media.lessThan('medium')]: {
-                    borderRadius: '0 0 10px 10px',
-                  },
-                }}>
+                  [media.lessThan("medium")]: {
+                    borderRadius: "0 0 10px 10px"
+                  }
+                }}
+              >
                 <div
                   css={{
-                    padding: '0 10px',
-                    backgroundColor: colors.divider,
-                  }}>
+                    padding: "0 10px",
+                    backgroundColor: colors.divider
+                  }}
+                >
                   <MetaTitle>Result</MetaTitle>
                 </div>
                 <div
                   css={{
                     padding: 10,
-                    maxHeight: '340px !important',
-                    overflow: 'auto',
+                    maxHeight: "340px !important",
+                    overflow: "auto",
 
-                    '& input': {
-                      width: '100%',
-                      display: 'block',
-                      border: '1px solid #ccc', // TODO
-                      padding: 5,
+                    "& input": {
+                      width: "100%",
+                      display: "block",
+                      border: "1px solid #ccc", // TODO
+                      padding: 5
                     },
 
-                    '& button': {
+                    "& button": {
                       marginTop: 10,
-                      padding: '5px 10px',
+                      padding: "5px 10px"
                     },
 
-                    '& textarea': {
-                      width: '100%',
+                    "& textarea": {
+                      width: "100%",
                       marginTop: 10,
                       height: 60,
-                      padding: 5,
-                    },
+                      padding: 5
+                    }
                   }}
                   ref={this._setMountRef}
                 />
@@ -279,24 +286,24 @@ class CodeEditor extends Component {
       return;
     }
 
-    const {compiled} = this.state;
+    const { compiled } = this.state;
 
     try {
       // Example code requires React, ReactDOM, and Remarkable to be within scope.
       // It also requires a "mountNode" variable for ReactDOM.render()
       // eslint-disable-next-line no-new-func
-      new Function('React', 'ReactDOM', 'Remarkable', 'mountNode', compiled)(
+      new Function("React", "ReactDOM", "Remarkable", "mountNode", compiled)(
         React,
         ReactDOM,
         Remarkable,
-        this._mountNode,
+        this._mountNode
       );
     } catch (error) {
       console.error(error);
 
       this.setState({
         compiled: null,
-        error,
+        error
       });
     }
   }
@@ -309,7 +316,7 @@ class CodeEditor extends Component {
     try {
       let newState = {
         compiled: compileES5(code),
-        error: null,
+        error: null
       };
 
       if (showJSX) {
@@ -330,7 +337,7 @@ class CodeEditor extends Component {
       return {
         compiled: null,
         error,
-        showBabelErrorMessage,
+        showBabelErrorMessage
       };
     }
   }

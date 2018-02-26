@@ -1,13 +1,6 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- * @flow
- */
+import { createElement } from "glamor/react";
 
-import {createElement} from 'glamor/react';
-
-import type {Node} from 'react';
+import type { Node } from "react";
 
 type Props = {
   basis: string,
@@ -18,38 +11,38 @@ type Props = {
   shrink: number,
   type: string,
   valign: string,
-  rest: Array<any>,
+  rest: Array<any>
 };
 
 /**
  * Convenience component for declaring a flexbox layout.
  */
 const Flex = ({
-  basis = 'auto',
+  basis = "auto",
   children,
-  direction = 'row',
+  direction = "row",
   grow = 0,
-  halign = 'flex-start',
+  halign = "flex-start",
   shrink = 1,
-  type = 'div',
-  valign = 'flex-start',
+  type = "div",
+  valign = "flex-start",
   ...rest
 }: Props) =>
   createElement(
     type,
     {
       css: {
-        display: 'flex',
+        display: "flex",
         flexDirection: direction,
         flexGrow: grow,
         flexShrink: shrink,
         flexBasis: basis,
-        justifyContent: direction === 'row' ? halign : valign,
-        alignItems: direction === 'row' ? valign : halign,
+        justifyContent: direction === "row" ? halign : valign,
+        alignItems: direction === "row" ? valign : halign
       },
-      ...rest,
+      ...rest
     },
-    children,
+    children
   );
 
 export default Flex;

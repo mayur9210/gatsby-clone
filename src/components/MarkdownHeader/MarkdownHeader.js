@@ -1,15 +1,8 @@
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * @emails react-core
- * @flow
- */
+import Flex from "components/Flex";
+import React from "react";
+import { colors, fonts, media } from "theme";
 
-import Flex from 'components/Flex';
-import React from 'react';
-import {colors, fonts, media} from 'theme';
-
-const MarkdownHeader = ({title}: {title: string}) => (
+const MarkdownHeader = ({ title }: { title: string }) => (
   <Flex type="header" halign="space-between" valign="baseline">
     <h1
       css={{
@@ -18,14 +11,15 @@ const MarkdownHeader = ({title}: {title: string}) => (
         marginTop: 40,
         ...fonts.header,
 
-        [media.size('medium')]: {
-          marginTop: 60,
+        [media.size("medium")]: {
+          marginTop: 60
         },
 
-        [media.greaterThan('large')]: {
-          marginTop: 80,
-        },
-      }}>
+        [media.greaterThan("large")]: {
+          marginTop: 80
+        }
+      }}
+    >
       {title}
     </h1>
   </Flex>
