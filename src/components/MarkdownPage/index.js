@@ -1,3 +1,3 @@
-import MarkdownPage from "./MarkdownPage";
+import MarkdownPage from './MarkdownPage';
 
 export default MarkdownPage;

@@ -1,16 +1,16 @@
-import Container from "components/Container";
-import Flex from "components/Flex";
-import MarkdownHeader from "components/MarkdownHeader";
-import NavigationFooter from "templates/components/NavigationFooter";
-import React from "react";
-import StickyResponsiveSidebar from "components/StickyResponsiveSidebar";
-import TitleAndMetaTags from "components/TitleAndMetaTags";
-import findSectionForPath from "utils/findSectionForPath";
-import toCommaSeparatedList from "utils/toCommaSeparatedList";
-import { sharedStyles } from "theme";
-import createOgUrl from "utils/createOgUrl";
+import Container from 'components/Container';
+import Flex from 'components/Flex';
+import MarkdownHeader from 'components/MarkdownHeader';
+import NavigationFooter from 'templates/components/NavigationFooter';
+import React from 'react';
+import StickyResponsiveSidebar from 'components/StickyResponsiveSidebar';
+import TitleAndMetaTags from 'components/TitleAndMetaTags';
+import findSectionForPath from 'utils/findSectionForPath';
+import toCommaSeparatedList from 'utils/toCommaSeparatedList';
+import {sharedStyles} from 'theme';
+import createOgUrl from 'utils/createOgUrl';
 
-import type { Node } from "types";
+import type {Node} from 'types';
 
 type Props = {
   authors: Array<string>,
@@ -21,7 +21,7 @@ type Props = {
   location: Location,
   markdownRemark: Node,
   sectionList: Array<Object>, // TODO: Add better flow type once we have the Section component
-  titlePostfix: string
+  titlePostfix: string,
 };
 
 const MarkdownPage = ({
@@ -33,10 +33,10 @@ const MarkdownPage = ({
   location,
   markdownRemark,
   sectionList,
-  titlePostfix = ""
+  titlePostfix = '',
 }: Props) => {
   const hasAuthors = authors.length > 0;
-  const titlePrefix = markdownRemark.frontmatter.title || "";
+  const titlePrefix = markdownRemark.frontmatter.title || '';
 
   return (
     <Flex
@@ -45,35 +45,33 @@ const MarkdownPage = ({
       shrink="0"
       halign="stretch"
       css={{
-        width: "100%",
-        flex: "1 0 auto",
-        position: "relative",
-        zIndex: 0
-      }}
-    >
+        width: '100%',
+        flex: '1 0 auto',
+        position: 'relative',
+        zIndex: 0,
+      }}>
       <TitleAndMetaTags
         ogDescription={ogDescription}
         ogUrl={createOgUrl(markdownRemark.fields.slug)}
         title={`${titlePrefix}${titlePostfix}`}
       />
-      <div css={{ flex: "1 0 auto" }}>
+      <div css={{flex: '1 0 auto'}}>
         <Container>
           <div css={sharedStyles.articleLayout.container}>
             <Flex type="article" direction="column" grow="1" halign="stretch">
               <MarkdownHeader title={titlePrefix} />
 
               {(date || hasAuthors) && (
-                <div css={{ marginTop: 15 }}>
-                  {date}{" "}
+                <div css={{marginTop: 15}}>
+                  {date}{' '}
                   {hasAuthors && (
                     <span>
-                      by{" "}
+                      by{' '}
                       {toCommaSeparatedList(authors, author => (
                         <a
                           css={sharedStyles.link}
                           href={author.frontmatter.url}
-                          key={author.frontmatter.name}
-                        >
+                          key={author.frontmatter.name}>
                           {author.frontmatter.name}
                         </a>
                       ))}
@@ -85,17 +83,16 @@ const MarkdownPage = ({
               <div css={sharedStyles.articleLayout.content}>
                 <div
                   css={[sharedStyles.markdown]}
-                  dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+                  dangerouslySetInnerHTML={{__html: markdownRemark.html}}
                 />
 
                 {markdownRemark.fields.path && (
-                  <div css={{ marginTop: 80 }}>
+                  <div css={{marginTop: 80}}>
                     <a
                       css={sharedStyles.articleLayout.editLink}
                       href={`https://github.com/reactjs/reactjs.org/tree/master/content/${
                         markdownRemark.fields.path
-                      }`}
-                    >
+                      }`}>
                       Edit this page
                     </a>
                   </div>
@@ -109,7 +106,7 @@ const MarkdownPage = ({
                 createLink={createLink}
                 defaultActiveSection={findSectionForPath(
                   location.pathname,
-                  sectionList
+                  sectionList,
                 )}
                 location={location}
                 sectionList={sectionList}

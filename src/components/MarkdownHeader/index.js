@@ -1,3 +1,3 @@
-import MarkdownHeader from "./MarkdownHeader";
+import MarkdownHeader from './MarkdownHeader';
 
 export default MarkdownHeader;
