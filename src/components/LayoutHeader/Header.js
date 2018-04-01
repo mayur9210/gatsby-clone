@@ -5,7 +5,6 @@ import React from 'react';
 import {colors, fonts, media} from 'theme';
 import {version} from 'site-constants';
 import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
-import DocSearch from './DocSearch';
 
 import logoSvg from 'icons/logo.svg';
 
@@ -122,8 +121,6 @@ const Header = ({location}: {location: Location}) => (
             to="/blog"
           />
         </nav>
-
-        <DocSearch />
 
         <div
           css={{

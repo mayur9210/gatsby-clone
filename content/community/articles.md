@@ -3,7 +3,7 @@ id: articles
 title: Articles
 layout: community
 sectionid: community
-permalink: community/articles.html
+permalink: community/articles
 ---
 
 - [React How-to](https://github.com/petehunt/react-howto) - Pete Hunt's guide to the React ecosystem.
