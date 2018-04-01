@@ -10,7 +10,6 @@ module.exports = async ({graphql, boundActionCreators}) => {
 
   const blogTemplate = resolve(__dirname, '../src/templates/blog.js');
   const communityTemplate = resolve(__dirname, '../src/templates/community.js');
-  const tutorialTemplate = resolve(__dirname, '../src/templates/tutorial.js');
 
   // Redirect /index.html to root.
   createRedirect({
@@ -49,18 +48,12 @@ module.exports = async ({graphql, boundActionCreators}) => {
       // No-op so far as markdown templates go.
       // Error codes are managed by a page in src/pages
       // (which gets created by Gatsby during a separate phase).
-    } else if (
-      slug.includes('blog/') ||
-      slug.includes('community/') ||
-      slug.includes('tutorial/')
-    ) {
+    } else if (slug.includes('blog/') || slug.includes('community/')) {
       let template;
       if (slug.includes('blog/')) {
         template = blogTemplate;
       } else if (slug.includes('community/')) {
         template = communityTemplate;
-      } else if (slug.includes('tutorial/')) {
-        template = tutorialTemplate;
       }
 
       const createArticlePage = path =>
