@@ -1,8 +1,8 @@
-import Container from "components/Container";
-import Header from "components/Header";
-import TitleAndMetaTags from "components/TitleAndMetaTags";
-import React from "react";
-import { sharedStyles } from "theme";
+import Container from 'components/Container';
+import Header from 'components/Header';
+import TitleAndMetaTags from 'components/TitleAndMetaTags';
+import React from 'react';
+import {sharedStyles} from 'theme';
 
 const PageNotFound = () => (
   <Container>

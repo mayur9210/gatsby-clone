@@ -1,3 +1,3 @@
-import StickyResponsiveSidebar from "./StickyResponsiveSidebar";
+import StickyResponsiveSidebar from './StickyResponsiveSidebar';
 
 export default StickyResponsiveSidebar;

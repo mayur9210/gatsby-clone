@@ -1,28 +1,28 @@
 // Polyfills for IE
-import "array-from";
-import "string.prototype.includes";
-import "string.prototype.repeat";
+import 'array-from';
+import 'string.prototype.includes';
+import 'string.prototype.repeat';
 
-import React, { Component } from "react";
-import Flex from "components/Flex";
-import Footer from "components/LayoutFooter";
-import Header from "components/LayoutHeader";
-import { media } from "theme";
+import React, {Component} from 'react';
+import Flex from 'components/Flex';
+import Footer from 'components/LayoutFooter';
+import Header from 'components/LayoutHeader';
+import {media} from 'theme';
 
 // Import global styles
-import "../prism-styles";
-import "glamor/reset";
-import "css/reset.css";
-import "css/algolia.css";
+import '../prism-styles';
+import 'glamor/reset';
+import 'css/reset.css';
+import 'css/algolia.css';
 
 type Props = {
   children: Function,
-  location: Location
+  location: Location,
 };
 
 class Template extends Component<Props> {
   render() {
-    const { children, location } = this.props;
+    const {children, location} = this.props;
 
     // TODO - is there a better way to check if we need we have a sidebar?
     let layoutHasSidebar = false;
@@ -33,11 +33,10 @@ class Template extends Component<Props> {
     return (
       <div
         css={{
-          display: "flex",
-          flexDirection: "column",
-          minHeight: "calc(100vh - 40px)"
-        }}
-      >
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: 'calc(100vh - 40px)',
+        }}>
         <Header location={location} />
         <Flex
           direction="column"
@@ -45,16 +44,15 @@ class Template extends Component<Props> {
           grow="1"
           valign="stretch"
           css={{
-            flex: "1 0 auto",
+            flex: '1 0 auto',
             marginTop: 60,
-            [media.between("medium", "large")]: {
-              marginTop: 50
+            [media.between('medium', 'large')]: {
+              marginTop: 50,
             },
-            [media.lessThan("medium")]: {
-              marginTop: 40
-            }
-          }}
-        >
+            [media.lessThan('medium')]: {
+              marginTop: 40,
+            },
+          }}>
           {children()}
         </Flex>
         <Footer layoutHasSidebar={layoutHasSidebar} />

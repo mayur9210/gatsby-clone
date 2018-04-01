@@ -1,3 +1,3 @@
-import MarkdownPost from "./MarkdownPost";
+import MarkdownPost from './MarkdownPost';
 
 export default MarkdownPost;

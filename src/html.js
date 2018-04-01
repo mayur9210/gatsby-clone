@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 
 let stylesStr;
 if (process.env.NODE_ENV === `production`) {
@@ -10,17 +10,17 @@ if (process.env.NODE_ENV === `production`) {
 }
 
 const JS_NPM_URLS = [
-  "//unpkg.com/docsearch.js@2.4.1/dist/cdn/docsearch.min.js"
+  '//unpkg.com/docsearch.js@2.4.1/dist/cdn/docsearch.min.js',
 ];
 
 export default class HTML extends Component {
   render() {
     let css;
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === 'production') {
       css = (
         <style
           id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
+          dangerouslySetInnerHTML={{__html: stylesStr}}
         />
       );
     }
@@ -43,7 +43,7 @@ export default class HTML extends Component {
         <body>
           <div
             id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
+            dangerouslySetInnerHTML={{__html: this.props.body}}
           />
           {this.props.postBodyComponents}
           {js}

@@ -1,21 +1,21 @@
-import Link from "gatsby-link";
-import React from "react";
-import ExternalLinkSvg from "templates/components/ExternalLinkSvg";
-import slugify from "utils/slugify";
-import { colors, media } from "theme";
+import Link from 'gatsby-link';
+import React from 'react';
+import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
+import slugify from 'utils/slugify';
+import {colors, media} from 'theme';
 
-import type { Node } from "react";
+import type {Node} from 'react';
 
 type CreateLinkBaseProps = {
   isActive: boolean,
   item: Object,
-  section: Object
+  section: Object,
 };
 
 const createLinkBlog = ({
   isActive,
   item,
-  section
+  section,
 }: CreateLinkBaseProps): Node => {
   return (
     <Link css={[linkCss, isActive && activeLinkCss]} to={item.id}>
@@ -28,7 +28,7 @@ const createLinkBlog = ({
 const createLinkCommunity = ({
   isActive,
   item,
-  section
+  section,
 }: CreateLinkBaseProps): Node => {
   if (item.href) {
     return (
@@ -37,9 +37,9 @@ const createLinkCommunity = ({
         <ExternalLinkSvg
           cssProps={{
             verticalAlign: -2,
-            display: "inline-block",
+            display: 'inline-block',
             marginLeft: 5,
-            color: colors.subtle
+            color: colors.subtle,
           }}
         />
       </a>
@@ -48,20 +48,19 @@ const createLinkCommunity = ({
   return createLinkDocs({
     isActive,
     item,
-    section
+    section,
   });
 };
 
 const createLinkDocs = ({
   isActive,
   item,
-  section
+  section,
 }: CreateLinkBaseProps): Node => {
   return (
     <Link
       css={[linkCss, isActive && activeLinkCss]}
-      to={slugify(item.id, section.directory)}
-    >
+      to={slugify(item.id, section.directory)}>
       {isActive && <span css={activeLinkBefore} />}
       {item.title}
     </Link>
@@ -69,21 +68,20 @@ const createLinkDocs = ({
 };
 
 type CreateLinkTutorialProps = {
-  onLinkClick: Function
+  onLinkClick: Function,
 } & CreateLinkBaseProps;
 
 const createLinkTutorial = ({
   isActive,
   item,
   onLinkClick,
-  section
+  section,
 }: CreateLinkTutorialProps): Node => {
   return (
     <Link
       css={[linkCss, isActive && activeLinkCss]}
       onClick={onLinkClick}
-      to={item.href}
-    >
+      to={item.href}>
       {isActive && <span css={activeLinkBefore} />}
       {item.title}
     </Link>
@@ -91,7 +89,7 @@ const createLinkTutorial = ({
 };
 
 const activeLinkCss = {
-  fontWeight: 700
+  fontWeight: 700,
 };
 
 const activeLinkBefore = {
@@ -99,25 +97,25 @@ const activeLinkBefore = {
   height: 25,
   borderLeft: `4px solid ${colors.brand}`,
   paddingLeft: 16,
-  position: "absolute",
+  position: 'absolute',
   left: 0,
   marginTop: -3,
 
-  [media.greaterThan("largerSidebar")]: {
-    left: 15
-  }
+  [media.greaterThan('largerSidebar')]: {
+    left: 15,
+  },
 };
 
 const linkCss = {
   color: colors.text,
-  display: "inline-block",
-  borderBottom: "1px solid transparent",
-  transition: "border 0.2s ease",
+  display: 'inline-block',
+  borderBottom: '1px solid transparent',
+  transition: 'border 0.2s ease',
   marginTop: 5,
 
-  "&:hover": {
-    color: colors.subtle
-  }
+  '&:hover': {
+    color: colors.subtle,
+  },
 };
 
-export { createLinkBlog, createLinkCommunity, createLinkTutorial };
+export {createLinkBlog, createLinkCommunity, createLinkTutorial};

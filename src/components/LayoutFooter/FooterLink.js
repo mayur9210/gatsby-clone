@@ -1,26 +1,25 @@
-import Link from "gatsby-link";
-import React from "react";
-import { colors } from "theme";
+import Link from 'gatsby-link';
+import React from 'react';
+import {colors} from 'theme';
 
-import type { Node } from "react";
+import type {Node} from 'react';
 
 type Props = {
   children: Node,
   target?: string,
-  to: string
+  to: string,
 };
 
-const FooterLink = ({ children, target, to }: Props) => (
+const FooterLink = ({children, target, to}: Props) => (
   <Link
     css={{
       lineHeight: 2,
-      ":hover": {
-        color: colors.brand
-      }
+      ':hover': {
+        color: colors.brand,
+      },
     }}
     to={to}
-    target={target}
-  >
+    target={target}>
     {children}
   </Link>
 );

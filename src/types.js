@@ -1,6 +1,6 @@
 export type Author = {
   name: string,
-  url: string
+  url: string,
 };
 
 export type Node = {
@@ -9,26 +9,26 @@ export type Node = {
     date?: string,
     path: string,
     redirect: string,
-    slug: string
+    slug: string,
   },
   frontmatter: {
     author?: Array<Author>,
     next?: string,
     prev?: string,
-    title: string
+    title: string,
   },
   html: string,
-  id: string
+  id: string,
 };
 
 export type Edge = {
-  node: Node
+  node: Node,
 };
 
 export type allMarkdownRemarkData = {
   allMarkdownRemark: {
-    edges: Array<Edge>
-  }
+    edges: Array<Edge>,
+  },
 };
 
 export type markdownRemarkData = Node;

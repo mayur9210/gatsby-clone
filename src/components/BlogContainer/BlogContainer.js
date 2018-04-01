@@ -1,30 +1,29 @@
-import React from "react";
+import React from 'react';
 
-import { media } from "theme";
+import {media} from 'theme';
 
-import type { Node } from "react";
+import type {Node} from 'react';
 
 /**
  * This component wraps page content sections (eg header, footer, main).
  * It provides consistent margin and max width behavior.
  */
-const BlogContainer = ({ children }: { children: Node }) => (
+const BlogContainer = ({children}: {children: Node}) => (
   <div
     css={{
       paddingLeft: 20,
       paddingRight: 20,
-      marginLeft: "auto",
-      marginRight: "auto",
+      marginLeft: 'auto',
+      marginRight: 'auto',
 
-      [media.greaterThan("medium")]: {
-        width: "90%"
+      [media.greaterThan('medium')]: {
+        width: '90%',
       },
 
-      [media.size("xxlarge")]: {
-        maxWidth: 880
-      }
-    }}
-  >
+      [media.size('xxlarge')]: {
+        maxWidth: 880,
+      },
+    }}>
     {children}
   </div>
 );

@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import Flex from "components/Flex";
-import Section from "./Section";
-import ScrollSyncSection from "./ScrollSyncSection";
-import { media } from "theme";
+import React, {Component} from 'react';
+import Flex from 'components/Flex';
+import Section from './Section';
+import ScrollSyncSection from './ScrollSyncSection';
+import {media} from 'theme';
 
 class Sidebar extends Component {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      activeSection: props.defaultActiveSection
+      activeSection: props.defaultActiveSection,
     };
   }
 
@@ -19,9 +19,9 @@ class Sidebar extends Component {
       createLink,
       enableScrollSync,
       location,
-      sectionList
+      sectionList,
     } = this.props;
-    const { activeSection } = this.state;
+    const {activeSection} = this.state;
 
     const SectionComponent = enableScrollSync ? ScrollSyncSection : Section;
 
@@ -31,19 +31,18 @@ class Sidebar extends Component {
         direction="column"
         halign="stretch"
         css={{
-          width: "100%",
+          width: '100%',
           paddingLeft: 20,
-          position: "relative",
+          position: 'relative',
 
-          [media.greaterThan("largerSidebar")]: {
-            paddingLeft: 40
+          [media.greaterThan('largerSidebar')]: {
+            paddingLeft: 40,
           },
 
-          [media.lessThan("small")]: {
-            paddingBottom: 100
-          }
-        }}
-      >
+          [media.lessThan('small')]: {
+            paddingBottom: 100,
+          },
+        }}>
         {sectionList.map((section, index) => (
           <SectionComponent
             createLink={createLink}
@@ -61,7 +60,7 @@ class Sidebar extends Component {
 
   _toggleSection(section) {
     this.setState(state => ({
-      activeSection: state.activeSection === section ? null : section
+      activeSection: state.activeSection === section ? null : section,
     }));
   }
 }

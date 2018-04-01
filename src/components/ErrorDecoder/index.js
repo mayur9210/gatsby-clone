@@ -1,3 +1,3 @@
-import ErrorDecoder from "./ErrorDecoder";
+import ErrorDecoder from './ErrorDecoder';
 
 export default ErrorDecoder;

@@ -1,3 +1,3 @@
-import NavigationFooter from "./NavigationFooter";
+import NavigationFooter from './NavigationFooter';
 
 export default NavigationFooter;

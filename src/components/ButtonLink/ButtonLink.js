@@ -1,14 +1,13 @@
-import Link from "gatsby-link";
-import React from "react";
-import { colors, media } from "theme";
+import Link from 'gatsby-link';
+import React from 'react';
+import {colors, media} from 'theme';
 
-const ArrowSvg = ({ cssProps = {} }) => (
+const ArrowSvg = ({cssProps = {}}) => (
   <svg
     css={cssProps}
     height="12"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 4.53657 8.69699"
-  >
+    viewBox="0 0 4.53657 8.69699">
     <path
       d={`
         M.18254,8.697a.18149.18149,0,0,1-.12886-.31034L4.09723,4.34126.05369.29954a.18149.18149,
@@ -20,13 +19,13 @@ const ArrowSvg = ({ cssProps = {} }) => (
   </svg>
 );
 
-const ButtonLink = ({ children, type, ...rest }) => {
+const ButtonLink = ({children, type, ...rest}) => {
   let typeStyle;
   switch (type) {
-    case "primary":
+    case 'primary':
       typeStyle = primaryStyle;
       break;
-    case "secondary":
+    case 'secondary':
       typeStyle = secondaryStyle;
       break;
   }
@@ -34,44 +33,44 @@ const ButtonLink = ({ children, type, ...rest }) => {
   return (
     <Link {...rest} css={[style, typeStyle]}>
       {children}
-      {type === "secondary" && <ArrowSvg cssProps={{ marginLeft: 10 }} />}
+      {type === 'secondary' && <ArrowSvg cssProps={{marginLeft: 10}} />}
     </Link>
   );
 };
 
 const style = {
-  display: "inline-block",
+  display: 'inline-block',
   fontSize: 16,
 
-  [media.greaterThan("xlarge")]: {
-    fontSize: 20
-  }
+  [media.greaterThan('xlarge')]: {
+    fontSize: 20,
+  },
 };
 
 const primaryStyle = {
   backgroundColor: colors.brand,
   color: colors.black,
-  padding: "10px 25px",
-  whiteSpace: "nowrap",
-  transition: "background-color 0.2s ease-out",
+  padding: '10px 25px',
+  whiteSpace: 'nowrap',
+  transition: 'background-color 0.2s ease-out',
 
-  [media.greaterThan("xlarge")]: {
+  [media.greaterThan('xlarge')]: {
     paddingTop: 15,
-    paddingBottom: 15
+    paddingBottom: 15,
   },
 
-  ":hover": {
-    backgroundColor: colors.white
-  }
+  ':hover': {
+    backgroundColor: colors.white,
+  },
 };
 
 const secondaryStyle = {
   color: colors.brand,
-  transition: "color 0.2s ease-out",
+  transition: 'color 0.2s ease-out',
 
-  ":hover": {
-    color: colors.white
-  }
+  ':hover': {
+    color: colors.white,
+  },
 };
 
 export default ButtonLink;

@@ -1,7 +1,7 @@
-import Container from "components/Container";
-import Header from "components/Header";
-import React from "react";
-import { sharedStyles } from "theme";
+import Container from 'components/Container';
+import Header from 'components/Header';
+import React from 'react';
+import {sharedStyles} from 'theme';
 
 const JsxCompiler = () => (
   <Container>
@@ -15,7 +15,7 @@ const JsxCompiler = () => (
             </strong>
           </p>
           <p>
-            We recommend using another tool such as{" "}
+            We recommend using another tool such as{' '}
             <a href="https://babeljs.io/repl/">the Babel REPL</a>.
           </p>
         </div>
