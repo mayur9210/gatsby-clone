@@ -1,7 +1,6 @@
 import BlogContainer from 'components/BlogContainer';
 import Flex from 'components/Flex';
 import MarkdownHeader from 'components/MarkdownHeader';
-import NavigationFooter from 'templates/components/NavigationFooter';
 import React from 'react';
 import TitleAndMetaTags from 'components/TitleAndMetaTags';
 import toCommaSeparatedList from 'utils/toCommaSeparatedList';
@@ -100,15 +99,6 @@ const MarkdownPost = ({
           </div>
         </BlogContainer>
       </div>
-
-      {/* TODO Read prev/next from index map, not this way */}
-      {(markdownRemark.frontmatter.next || markdownRemark.frontmatter.prev) && (
-        <NavigationFooter
-          location={location}
-          next={markdownRemark.frontmatter.next}
-          prev={markdownRemark.frontmatter.prev}
-        />
-      )}
     </Flex>
   );
 };

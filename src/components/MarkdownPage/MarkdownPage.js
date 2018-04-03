@@ -1,7 +1,6 @@
 import Container from 'components/Container';
 import Flex from 'components/Flex';
 import MarkdownHeader from 'components/MarkdownHeader';
-import NavigationFooter from 'templates/components/NavigationFooter';
 import React from 'react';
 import StickyResponsiveSidebar from 'components/StickyResponsiveSidebar';
 import TitleAndMetaTags from 'components/TitleAndMetaTags';
@@ -115,15 +114,6 @@ const MarkdownPage = ({
           </div>
         </Container>
       </div>
-
-      {/* TODO Read prev/next from index map, not this way */}
-      {(markdownRemark.frontmatter.next || markdownRemark.frontmatter.prev) && (
-        <NavigationFooter
-          location={location}
-          next={markdownRemark.frontmatter.next}
-          prev={markdownRemark.frontmatter.prev}
-        />
-      )}
     </Flex>
   );
 };

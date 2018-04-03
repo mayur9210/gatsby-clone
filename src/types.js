@@ -13,8 +13,6 @@ export type Node = {
   },
   frontmatter: {
     author?: Array<Author>,
-    next?: string,
-    prev?: string,
     title: string,
   },
   html: string,
