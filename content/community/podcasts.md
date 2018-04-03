@@ -3,7 +3,7 @@ id: podcasts
 title: Podcasts
 layout: community
 sectionid: community
-permalink: community/podcasts.html
+permalink: community/podcasts
 ---
 
 Podcasts dedicated to React and individual podcast episodes with React discussions.

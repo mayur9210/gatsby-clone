@@ -3,8 +3,8 @@ id: support
 title: Where To Get Support
 layout: community
 sectionid: community
-permalink: community/support.html
-redirect_from: "support.html"
+permalink: community/support
+redirect_from: "support"
 ---
 
 **React** is worked on full-time by Facebook's product infrastructure and Instagram's user interface engineering teams. They're often around and available for questions.

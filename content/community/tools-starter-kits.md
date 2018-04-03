@@ -2,7 +2,7 @@
 id: starter-kits
 title: Starter Kits
 layout: community
-permalink: community/starter-kits.html
+permalink: community/starter-kits
 ---
 
 ## Recommended by the React Team

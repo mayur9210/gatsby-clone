@@ -2,7 +2,7 @@
 id: ui-components
 title: UI Components
 layout: community
-permalink: community/ui-components.html
+permalink: community/ui-components
 ---
 
 ## Free Components

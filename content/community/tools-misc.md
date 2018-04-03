@@ -2,7 +2,7 @@
 id: misc
 title: Miscellaneous
 layout: community
-permalink: community/misc.html
+permalink: community/misc
 ---
 
 * **[react-localize-redux](https://github.com/ryandrewjohnson/react-localize-redux)** - Localization library for React/Redux.

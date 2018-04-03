@@ -4,8 +4,6 @@
       title: Support
     - id: conferences
       title: Conferences
-    - id: meetups
-      title: Meetups
     - id: articles
       title: Articles
     - id: podcasts
@@ -22,8 +20,6 @@
   items:
     - id: debugging-tools
       title: Debugging
-    - id: component-workbenches
-      title: Component Workbenches
     - id: jsx-integrations
       title: JSX Integrations
     - id: starter-kits

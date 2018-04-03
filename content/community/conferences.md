@@ -3,7 +3,7 @@ id: conferences
 title: Conferences
 layout: community
 sectionid: community
-permalink: community/conferences.html
+permalink: community/conferences
 redirect_from: "docs/conferences.html"
 ---
 

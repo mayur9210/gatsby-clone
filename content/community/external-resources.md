@@ -3,7 +3,7 @@ id: external-resources
 title: External Resources
 layout: community
 sectionid: community
-permalink: community/external-resources.html
+permalink: community/external-resources
 ---
 
 There are many wonderful curated resources the React community has put together.

@@ -3,7 +3,7 @@ id: examples
 title: Example Projects
 layout: community
 sectionid: community
-permalink: community/examples.html
+permalink: community/examples
 ---
 
 There are many example projects created by the React community. Feel free to add your own project. If you add a project, please commit to keeping it up to date with the latest versions of React.

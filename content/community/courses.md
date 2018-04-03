@@ -3,7 +3,7 @@ id: courses
 title: Courses
 layout: community
 sectionid: community
-permalink: community/courses.html
+permalink: community/courses
 ---
 
 ## Free Courses

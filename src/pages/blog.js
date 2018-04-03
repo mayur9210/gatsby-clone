@@ -36,11 +36,11 @@ const AllBlogPosts = ({data}: Props) => (
                 width: '100%',
 
                 [media.size('medium')]: {
-                  width: '50%',
+                  width: '100%',
                 },
 
                 [media.greaterThan('large')]: {
-                  width: '33.33%',
+                  width: '100%',
                 },
               }}
               key={node.fields.slug}>

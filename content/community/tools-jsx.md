@@ -2,7 +2,7 @@
 id: jsx-integrations
 title: JSX Integrations
 layout: community
-permalink: community/jsx-integrations.html
+permalink: community/jsx-integrations
 ---
 
 ## Editor Integrations

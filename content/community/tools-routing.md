@@ -2,7 +2,7 @@
 id: routing
 title: Routing
 layout: community
-permalink: community/routing.html
+permalink: community/routing
 ---
 
 * **[Aviator](https://github.com/swipely/aviator)** - Aviator is a front-end router built for modular single page applications. ([Example](https://gist.github.com/hojberg/9549330)).

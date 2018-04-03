@@ -3,7 +3,7 @@ id: videos
 title: Videos
 layout: community
 sectionid: community
-permalink: community/videos.html
+permalink: community/videos
 redirect_from: "docs/videos.html"
 ---
 

@@ -3,9 +3,9 @@ import Flex from 'components/Flex';
 import MarkdownHeader from 'components/MarkdownHeader';
 import NavigationFooter from 'templates/components/NavigationFooter';
 import React from 'react';
-// import StickyResponsiveSidebar from 'components/StickyResponsiveSidebar';
+import StickyResponsiveSidebar from 'components/StickyResponsiveSidebar';
 import TitleAndMetaTags from 'components/TitleAndMetaTags';
-// import findSectionForPath from 'utils/findSectionForPath';
+import findSectionForPath from 'utils/findSectionForPath';
 import toCommaSeparatedList from 'utils/toCommaSeparatedList';
 import {sharedStyles} from 'theme';
 import createOgUrl from 'utils/createOgUrl';
@@ -86,7 +86,7 @@ const MarkdownPage = ({
                   dangerouslySetInnerHTML={{__html: markdownRemark.html}}
                 />
 
-                {markdownRemark.fields.path && (
+                {/* {markdownRemark.fields.path && (
                   <div css={{marginTop: 80}}>
                     <a
                       css={sharedStyles.articleLayout.editLink}
@@ -96,11 +96,11 @@ const MarkdownPage = ({
                       Edit this page
                     </a>
                   </div>
-                )}
+                )} */}
               </div>
             </Flex>
 
-            {/* <div css={sharedStyles.articleLayout.sidebar}>
+            <div css={sharedStyles.articleLayout.sidebar}>
               <StickyResponsiveSidebar
                 enableScrollSync={enableScrollSync}
                 createLink={createLink}
@@ -111,7 +111,7 @@ const MarkdownPage = ({
                 location={location}
                 sectionList={sectionList}
               />
-            </div> */}
+            </div>
           </div>
         </Container>
       </div>

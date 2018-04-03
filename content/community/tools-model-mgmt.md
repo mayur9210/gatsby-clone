@@ -2,7 +2,7 @@
 id: model-management
 title: Model Management
 layout: community
-permalink: community/model-management.html
+permalink: community/model-management
 ---
 
 * **[Alt](http://alt.js.org/):** Pure vanilla flux made isomorphic and without the boilerplate.
