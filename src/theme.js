@@ -135,8 +135,9 @@ const sharedStyles = {
       flexDirection: 'column',
 
       [media.between('small', 'sidebarFixed')]: {
-        borderLeft: '1px solid #ececec',
-        marginLeft: 80,
+        // borderLeft: '1px solid #ececec',
+        paddingTop: 30,
+        // marginLeft: 80,
       },
 
       [media.between('small', 'largerSidebar')]: {

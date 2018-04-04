@@ -36,3 +36,11 @@
       title: UI Components
     - id: misc
       title: Miscellaneous
+# - title: Tools Item
+#   items:
+#     - id: debugging-tools
+#       title: Debugging
+#     - id: jsx-integrations
+#       title: JSX Integrations
+#     - id: starter-kits
+#       title: Starter Kits

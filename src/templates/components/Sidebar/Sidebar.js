@@ -33,6 +33,7 @@ class Sidebar extends Component {
         css={{
           width: '100%',
           paddingLeft: 20,
+          paddingRight: 20,
           position: 'relative',
 
           [media.greaterThan('largerSidebar')]: {

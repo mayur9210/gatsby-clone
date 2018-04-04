@@ -57,47 +57,15 @@ const MarkdownPage = ({
       <div css={{flex: '1 0 auto'}}>
         <Container>
           <div css={sharedStyles.articleLayout.container}>
-            <Flex type="article" direction="column" grow="1" halign="stretch">
+            {/* <Flex type="article" direction="column" grow="1" halign="stretch">
               <MarkdownHeader title={titlePrefix} />
-
-              {(date || hasAuthors) && (
-                <div css={{marginTop: 15}}>
-                  {date}{' '}
-                  {hasAuthors && (
-                    <span>
-                      by{' '}
-                      {toCommaSeparatedList(authors, author => (
-                        <a
-                          css={sharedStyles.link}
-                          href={author.frontmatter.url}
-                          key={author.frontmatter.name}>
-                          {author.frontmatter.name}
-                        </a>
-                      ))}
-                    </span>
-                  )}
-                </div>
-              )}
-
               <div css={sharedStyles.articleLayout.content}>
                 <div
                   css={[sharedStyles.markdown]}
                   dangerouslySetInnerHTML={{__html: markdownRemark.html}}
                 />
-
-                {/* {markdownRemark.fields.path && (
-                  <div css={{marginTop: 80}}>
-                    <a
-                      css={sharedStyles.articleLayout.editLink}
-                      href={`https://github.com/reactjs/reactjs.org/tree/master/content/${
-                        markdownRemark.fields.path
-                      }`}>
-                      Edit this page
-                    </a>
-                  </div>
-                )} */}
               </div>
-            </Flex>
+            </Flex> */}
 
             <div css={sharedStyles.articleLayout.sidebar}>
               <StickyResponsiveSidebar
@@ -111,6 +79,15 @@ const MarkdownPage = ({
                 sectionList={sectionList}
               />
             </div>
+            <Flex type="article" direction="column" grow="1" halign="stretch">
+              <MarkdownHeader title={titlePrefix} />
+              <div css={sharedStyles.articleLayout.content}>
+                <div
+                  css={[sharedStyles.markdown]}
+                  dangerouslySetInnerHTML={{__html: markdownRemark.html}}
+                />
+              </div>
+            </Flex>
           </div>
         </Container>
       </div>

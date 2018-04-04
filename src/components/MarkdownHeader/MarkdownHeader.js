@@ -16,7 +16,7 @@ const MarkdownHeader = ({title}: {title: string}) => (
         },
 
         [media.greaterThan('large')]: {
-          marginTop: 80,
+          // marginTop: 80,
         },
       }}>
       {title}
