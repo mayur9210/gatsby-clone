@@ -1,8 +1,8 @@
 ---
 id: data-fetching
 title: Data Fetching
-layout: community
-permalink: community/data-fetching
+layout: credit-cards
+permalink: credit-cards/data-fetching
 ---
 
 * **[Apollo](http://dev.apollodata.com/react/):** Easy to set up and use GraphQL client.

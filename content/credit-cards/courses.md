@@ -1,9 +1,9 @@
 ---
 id: courses
 title: Courses
-layout: community
-sectionid: community
-permalink: community/courses
+layout: credit-cards
+sectionid: credit-cards
+permalink: credit-cards/courses
 ---
 
 ## Free Courses

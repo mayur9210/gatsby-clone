@@ -1,8 +1,8 @@
 ---
 id: model-management
 title: Model Management
-layout: community
-permalink: community/model-management
+layout: credit-cards
+permalink: credit-cards/model-management
 ---
 
 * **[Alt](http://alt.js.org/):** Pure vanilla flux made isomorphic and without the boilerplate.

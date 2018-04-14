@@ -1,9 +1,9 @@
 ---
 id: podcasts
 title: Podcasts
-layout: community
-sectionid: community
-permalink: community/podcasts
+layout: credit-cards
+sectionid: credit-cards
+permalink: credit-cards/podcasts
 ---
 
 Podcasts dedicated to React and individual podcast episodes with React discussions.

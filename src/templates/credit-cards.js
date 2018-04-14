@@ -1,26 +1,26 @@
 import MarkdownPage from 'components/MarkdownPage';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {createLinkCommunity} from 'utils/createLink';
-import {sectionListCommunity} from 'utils/sectionList';
+import {createLinkCredit} from 'utils/createLink';
+import {sectionListCredit} from 'utils/sectionList';
 
-const Community = ({data, location}) => (
+const credit = ({data, location}) => (
   <MarkdownPage
-    createLink={createLinkCommunity}
+    createLink={createLinkCredit}
     location={location}
     markdownRemark={data.markdownRemark}
-    sectionList={sectionListCommunity}
+    sectionList={sectionListCredit}
     titlePostfix=" | React"
   />
 );
 
-Community.propTypes = {
+credit.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
 // eslint-disable-next-line no-undef
 export const pageQuery = graphql`
-  query TemplateCommunityMarkdown($slug: String!) {
+  query TemplateCreditMarkdown($slug: String!) {
     markdownRemark(fields: {slug: {eq: $slug}}) {
       html
       frontmatter {
@@ -34,4 +34,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export default Community;
+export default credit;

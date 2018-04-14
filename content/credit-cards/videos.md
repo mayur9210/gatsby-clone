@@ -1,9 +1,9 @@
 ---
 id: videos
 title: Videos
-layout: community
-sectionid: community
-permalink: community/videos
+layout: credit-cards
+sectionid: credit-cards
+permalink: credit-cards/videos
 redirect_from: "docs/videos.html"
 ---
 

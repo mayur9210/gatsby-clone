@@ -9,7 +9,10 @@ module.exports = async ({graphql, boundActionCreators}) => {
   const redirectToSlugMap = {};
 
   const blogTemplate = resolve(__dirname, '../src/templates/blog.js');
-  const communityTemplate = resolve(__dirname, '../src/templates/community.js');
+  const communityTemplate = resolve(
+    __dirname,
+    '../src/templates/credit-cards.js',
+  );
 
   // Redirect /index.html to root.
   createRedirect({
@@ -48,11 +51,11 @@ module.exports = async ({graphql, boundActionCreators}) => {
       // No-op so far as markdown templates go.
       // Error codes are managed by a page in src/pages
       // (which gets created by Gatsby during a separate phase).
-    } else if (slug.includes('blog/') || slug.includes('community/')) {
+    } else if (slug.includes('blog/') || slug.includes('credit-cards/')) {
       let template;
       if (slug.includes('blog/')) {
         template = blogTemplate;
-      } else if (slug.includes('community/')) {
+      } else if (slug.includes('credit-cards/')) {
         template = communityTemplate;
       }
 

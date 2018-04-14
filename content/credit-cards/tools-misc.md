@@ -1,8 +1,8 @@
 ---
 id: misc
 title: Miscellaneous
-layout: community
-permalink: community/misc
+layout: credit-cards
+permalink: credit-cards/misc
 ---
 
 * **[react-localize-redux](https://github.com/ryandrewjohnson/react-localize-redux)** - Localization library for React/Redux.

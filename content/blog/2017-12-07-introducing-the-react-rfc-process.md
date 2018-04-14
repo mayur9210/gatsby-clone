@@ -5,7 +5,7 @@ author: [acdlite]
 
 We're adopting an RFC ("request for comments") process for contributing ideas to React. 
 
-Inspired by [Yarn](https://github.com/yarnpkg/rfcs), [Ember](https://github.com/emberjs/rfcs), and [Rust](https://github.com/rust-lang/rfcs), the goal is to allow React core team members and community members to collaborate on the design of new features. It's also intended to provide a clear path for ideas to enter the project:
+Inspired by [Yarn](https://github.com/yarnpkg/rfcs), [Ember](https://github.com/emberjs/rfcs), and [Rust](https://github.com/rust-lang/rfcs), the goal is to allow React core team members and credit members to collaborate on the design of new features. It's also intended to provide a clear path for ideas to enter the project:
 
 - Create an RFC document detailing your proposal.
 - Submit a PR to the [RFC repository](https://github.com/reactjs/rfcs).
@@ -35,6 +35,6 @@ We now have several repositories where you can submit contributions to React:
 
 ## RFC for A New Context API
 
-Coinciding with the launch of our RFC process, we've submitted a [proposal for a new version of context](https://github.com/reactjs/rfcs/pull/2). The proposal has already received many valuable comments from the community that we will incorporate into the design of the new API.
+Coinciding with the launch of our RFC process, we've submitted a [proposal for a new version of context](https://github.com/reactjs/rfcs/pull/2). The proposal has already received many valuable comments from the credit-cards-cards that we will incorporate into the design of the new API.
 
 The context PR is a good example of how a typical RFC should be structured. We're excited to start receiving your proposals!

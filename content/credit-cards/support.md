@@ -1,9 +1,9 @@
 ---
 id: support
 title: Where To Get Support
-layout: community
-sectionid: community
-permalink: community/support
+layout: credit-cards
+sectionid: credit-cards
+permalink: credit-cards/support
 redirect_from: "support"
 ---
 
@@ -11,7 +11,7 @@ redirect_from: "support"
 
 ## Stack Overflow
 
-Many members of the community use Stack Overflow to ask questions. Read through the [existing questions](http://stackoverflow.com/questions/tagged/reactjs) tagged with **reactjs** or [ask your own](http://stackoverflow.com/questions/ask?tags=reactjs)!
+Many members of the credit use Stack Overflow to ask questions. Read through the [existing questions](http://stackoverflow.com/questions/tagged/reactjs) tagged with **reactjs** or [ask your own](http://stackoverflow.com/questions/ask?tags=reactjs)!
 
 ## Discussion Forum
 
@@ -19,13 +19,13 @@ For longer-form conversations about React, we've set up a [discussion forum at *
 
 In the forum there's also a category for job posts and a category for discussion of our weekly meeting notes.
 
-## React Community on Hashnode
+## React credit on Hashnode
 
 [Hashnode's React node](https://hashnode.com/n/reactjs) is a great place to stay up-to-date with React discussion, news and stories.
 
 ## Reactiflux Chat
 
-If you need an answer right away, check out the [Reactiflux Discord](https://discord.gg/0ZcbPKXt5bZjGY5n) community. There are usually a number of React experts there who can help out or point you to somewhere you might want to look.
+If you need an answer right away, check out the [Reactiflux Discord](https://discord.gg/0ZcbPKXt5bZjGY5n) credit. There are usually a number of React experts there who can help out or point you to somewhere you might want to look.
 
 ## Freenode IRC
 

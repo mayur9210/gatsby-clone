@@ -1,9 +1,9 @@
 ---
 id: conferences
 title: Conferences
-layout: community
-sectionid: community
-permalink: community/conferences
+layout: credit-cards
+sectionid: credit-cards
+permalink: credit-cards/conferences
 redirect_from: "docs/conferences.html"
 ---
 

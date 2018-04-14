@@ -111,9 +111,9 @@ const Header = ({location}: {location: Location}) => (
             to="/banking"
           />
           <HeaderLink
-            isActive={location.pathname.includes('/community/')}
+            isActive={location.pathname.includes('/credit-cards/')}
             title="Credit Cards"
-            to="/community/support"
+            to="/credit-cards/support"
           />
           <HeaderLink
             isActive={location.pathname.includes('/blog')}

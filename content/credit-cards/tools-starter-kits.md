@@ -1,8 +1,8 @@
 ---
 id: starter-kits
 title: Starter Kits
-layout: community
-permalink: community/starter-kits
+layout: credit-cards
+permalink: credit-cards/starter-kits
 ---
 
 ## Recommended by the React Team

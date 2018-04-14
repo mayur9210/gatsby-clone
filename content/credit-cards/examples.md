@@ -1,12 +1,12 @@
 ---
 id: examples
 title: Example Projects
-layout: community
-sectionid: community
-permalink: community/examples
+layout: credit-cards
+sectionid: credit-cards
+permalink: credit-cards/examples
 ---
 
-There are many example projects created by the React community. Feel free to add your own project. If you add a project, please commit to keeping it up to date with the latest versions of React.
+There are many example projects created by the React credit. Feel free to add your own project. If you add a project, please commit to keeping it up to date with the latest versions of React.
 
 
 * **[Calculator](https://github.com/ahfarmer/calculator)** Implementation of the iOS calculator built in React

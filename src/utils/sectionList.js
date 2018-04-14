@@ -1,11 +1,11 @@
 // $FlowExpectedError
-import navCommunity from '../../content/community/nav.yml';
+import navCredit from '../../content/credit-cards/nav.yml';
 
 // $FlowExpectedError
 
-const sectionListCommunity = navCommunity.map((item: Object): Object => ({
+const sectionListCredit = navCredit.map((item: Object): Object => ({
   ...item,
-  directory: 'community',
+  directory: 'credit-cards',
 }));
 
-export {sectionListCommunity};
+export {sectionListCredit};

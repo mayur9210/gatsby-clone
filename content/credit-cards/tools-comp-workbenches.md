@@ -1,8 +1,8 @@
 ---
 id: component-workbenches
 title: Component Workbenches
-layout: community
-permalink: community/component-workbenches.html
+layout: credit-cards
+permalink: credit-cards/component-workbenches.html
 ---
 
 * **[Storybook for React](https://github.com/storybooks/storybook):** UI component development environment for React.

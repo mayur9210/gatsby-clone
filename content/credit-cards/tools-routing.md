@@ -1,8 +1,8 @@
 ---
 id: routing
 title: Routing
-layout: community
-permalink: community/routing
+layout: credit-cards
+permalink: credit-cards/routing
 ---
 
 * **[Aviator](https://github.com/swipely/aviator)** - Aviator is a front-end router built for modular single page applications. ([Example](https://gist.github.com/hojberg/9549330)).

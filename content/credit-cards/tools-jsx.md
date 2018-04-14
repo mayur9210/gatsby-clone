@@ -1,8 +1,8 @@
 ---
 id: jsx-integrations
 title: JSX Integrations
-layout: community
-permalink: community/jsx-integrations
+layout: credit-cards
+permalink: credit-cards/jsx-integrations
 ---
 
 ## Editor Integrations

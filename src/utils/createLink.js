@@ -25,7 +25,7 @@ const createLinkBlog = ({
   );
 };
 
-const createLinkCommunity = ({
+const createLinkCredit = ({
   isActive,
   item,
   section,
@@ -118,4 +118,4 @@ const linkCss = {
   },
 };
 
-export {createLinkBlog, createLinkCommunity, createLinkTutorial};
+export {createLinkBlog, createLinkCredit, createLinkTutorial};

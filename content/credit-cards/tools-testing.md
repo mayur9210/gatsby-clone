@@ -1,8 +1,8 @@
 ---
 id: testing
 title: Testing
-layout: community
-permalink: community/testing
+layout: credit-cards
+permalink: credit-cards/testing
 ---
 
 * **[Enzyme](https://github.com/airbnb/enzyme/):** a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.

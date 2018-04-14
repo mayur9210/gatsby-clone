@@ -1,8 +1,8 @@
 ---
 id: ui-components
 title: UI Components
-layout: community
-permalink: community/ui-components
+layout: credit-cards
+permalink: credit-cards/cards/ui-components
 ---
 
 ## Free Components

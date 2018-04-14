@@ -5,7 +5,7 @@ import FooterNav from './FooterNav';
 import MetaTitle from 'templates/components/MetaTitle';
 import React from 'react';
 import {colors, media} from 'theme';
-import {sectionListCommunity} from 'utils/sectionList';
+import {sectionListCredit} from 'utils/sectionList';
 
 import ossLogoPng from 'images/oss_logo.png';
 
@@ -92,11 +92,11 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
             </ExternalFooterLink>
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
-            <MetaTitle onDark={true}>Community</MetaTitle>
-            {sectionListCommunity.map(section => (
+            <MetaTitle onDark={true}>credit cards</MetaTitle>
+            {sectionListCredit.map(section => (
               <FooterLink
                 key={section.items[0].id}
-                to={`/community/${section.items[0].id}.html`}>
+                to={`/credit-cards/${section.items[0].id}.html`}>
                 {section.title}
               </FooterLink>
             ))}

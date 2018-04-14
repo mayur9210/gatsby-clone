@@ -1,9 +1,9 @@
 ---
 id: articles
 title: Articles
-layout: community
-sectionid: community
-permalink: community/articles
+layout: credit-cards
+sectionid: credit-cards
+permalink: credit-cards/articles
 ---
 
 - [React How-to](https://github.com/petehunt/react-howto) - Pete Hunt's guide to the React ecosystem.
